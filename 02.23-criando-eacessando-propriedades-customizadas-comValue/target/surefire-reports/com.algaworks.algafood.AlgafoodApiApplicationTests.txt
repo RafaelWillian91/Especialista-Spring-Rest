@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.algaworks.algafood.AlgafoodApiApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.268 s <<< FAILURE! - in com.algaworks.algafood.AlgafoodApiApplicationTests
+contextLoads(com.algaworks.algafood.AlgafoodApiApplicationTests)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'meuPrimeiroController' defined in file [D:\Documentos\Curso AlgaWorks - Especialista Spring Rest\02.22-Publicando e consumindo eventos customizados\target\classes\com\algaworks\algafood\MeuPrimeiroController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ativacaoClienteService' defined in class path resource [com/algaworks/algafood/ServiceConfig.class]: Invocation of init method failed; nested exception is org.springframework.beans.factory.support.BeanDefinitionValidationException: Could not find an init method named 'init' on bean with name 'ativacaoClienteService'
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ativacaoClienteService' defined in class path resource [com/algaworks/algafood/ServiceConfig.class]: Invocation of init method failed; nested exception is org.springframework.beans.factory.support.BeanDefinitionValidationException: Could not find an init method named 'init' on bean with name 'ativacaoClienteService'
+Caused by: org.springframework.beans.factory.support.BeanDefinitionValidationException: Could not find an init method named 'init' on bean with name 'ativacaoClienteService'
+
