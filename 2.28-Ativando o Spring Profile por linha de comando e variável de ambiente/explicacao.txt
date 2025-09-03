@@ -1,0 +1,17 @@
+O Spring Boot tem um mecanismo automático chamado Externalized Configuration.
+Ele sempre vai buscar configurações em várias fontes (linha de comando, variáveis de ambiente, application.properties, etc.), em ordem de prioridade.
+
+🔹 No caso específico do Profile
+
+Ou seja:
+
+Se você passa no comando, ele vence a variável.
+java -jar app.jar --spring.profiles.active=production
+
+
+Se não tem no comando, mas tem a variável de ambiente, ele pega essa.
+SPRING_PROFILES_ACTIVE=production
+
+
+Se não tem variável, cai no que estiver configurado no application.properties.
+spring.profiles.active=development

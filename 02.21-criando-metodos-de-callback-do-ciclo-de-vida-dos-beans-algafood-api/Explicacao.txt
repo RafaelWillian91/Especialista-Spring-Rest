@@ -1,0 +1,62 @@
+Em Spring, métodos de callback são ganchos (hooks) que o framework chama automaticamente em determinados momentos do ciclo de vida de um bean. Eles permitem que você execute lógica personalizada antes ou depois de certas fases, como inicialização ou destruição do bean, sem que você precise controlar isso manualmente.
+
+Principais tipos de callbacks no Spring
+
+Callbacks de inicialização (startup)
+São chamados logo após a criação e injeção de dependências do bean.
+
+Interface InitializingBean → método afterPropertiesSet()
+
+Anotação @PostConstruct
+
+Método customizado declarado em initMethod (no @Bean ou XML)
+
+exemplo: 
+
+@Component
+public class MeuBean {
+
+    @PostConstruct
+    public void init() {
+        System.out.println("Bean inicializado!");
+    }
+}
+
+
+Callbacks de destruição (shutdown)
+São executados antes do bean ser removido do contexto (ex.: ao encerrar a aplicação).
+
+Interface DisposableBean → método destroy()
+
+Anotação @PreDestroy
+
+Método customizado declarado em destroyMethod
+
+Exemplo: 
+@Component
+public class MeuBean {
+
+    @PreDestroy
+    public void cleanup() {
+        System.out.println("Bean será destruído!");
+    }
+}
+
+Callbacks de ciclo de vida mais avançados
+
+ApplicationContextAware, BeanNameAware, BeanFactoryAware: usados para obter referências internas do container.
+
+ApplicationListener → permite reagir a eventos do contexto (por exemplo, quando o contexto é iniciado ou fechado).
+
+SmartLifecycle → usado para beans que precisam de ordem específica de inicialização/parada.
+
+Por que usar?
+
+Executar configuração extra depois da injeção de dependências.
+
+Iniciar recursos (threads, conexões, caches).
+
+Liberar recursos (fechar conexões, parar serviços).
+
+Reagir a eventos de ciclo de vida do container.
+
