@@ -1,0 +1,3 @@
+echo "**/target/" >> .gitignore
+echo ".idea/" >> .gitignore
+echo "*.iml" >> .gitignore
