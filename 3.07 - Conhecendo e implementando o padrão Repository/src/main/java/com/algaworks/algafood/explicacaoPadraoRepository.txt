@@ -1,0 +1,23 @@
+O padrão Repository é um conceito muito usado em aplicações que seguem DDD (Domain-Driven Design) ou arquiteturas em camadas. Ele funciona como uma ponte entre o domínio e a camada de persistência (banco de dados, APIs externas, arquivos etc.).
+
+Ideia principal
+
+O repositório atua como uma coleção em memória de objetos do domínio, mas que na prática busca e persiste dados em uma fonte externa. Isso permite que o domínio não conheça detalhes de acesso a dados.
+
+Objetivos do padrão Repository
+
+Encapsular a lógica de persistência
+
+Quem usa o domínio não precisa saber se os dados vêm de SQL, NoSQL, cache, arquivo ou API.
+
+Fornecer uma interface simples
+
+Como se estivéssemos lidando com uma List, Set ou outro tipo de coleção.
+
+Dar foco no domínio
+
+O código de negócio manipula entidades e agregados, sem se preocupar com queries SQL ou detalhes do ORM.
+
+Facilitar testes
+
+É possível trocar a implementação real por um repositório em memória (mock/fake).
