@@ -1,0 +1,51 @@
+Visa dar um controle mais fino da Resposta Http.
+Ao inves de retornar um objeto que o jackson vai serializar para um json ou xml, podemos retornar um ResposeEntity<Tipo do objeto>, assim
+podemos adicionar novas header e inclusive mudar o status http de forma mais programática
+
+ResponseEntity<T> é um wrapper para resposta HTTP.
+
+Dá controle fino sobre:
+
+Status (ok, created, noContent, notFound, badRequest, etc.).
+
+Headers (customizados ou padrão, como Location).
+
+Body (um objeto, lista, DTO ou até vazio).
+
+
+
+No retorno do método ele usa o padrão Builder, onde vamos construindo a resposta de retorno
+
+    Como funciona o Builder no ResponseEntity
+
+    Você pode ir encadeando chamadas até fechar a resposta com .body(...) ou .build():
+
+       return ResponseEntity.status(HttpStatus.ok).body(objeto);
+
+
+Apenas Status (sem corpo):
+return ResponseEntity
+        .status(HttpStatus.NO_CONTENT)
+        .build();   // nada no body
+
+
+Status + Header + Body:
+return ResponseEntity
+        .status(HttpStatus.CREATED)
+        .header("Location", "/cozinhas/" + cozinha.getId())
+        .body(cozinha);
+
+obs:
+Açúcares sintáticos do Spring
+
+O Spring já fornece atalhos que usam o builder por baixo dos panos:
+
+ResponseEntity.ok(objeto) ⟶ equivale a ResponseEntity.status(HttpStatus.OK).body(objeto)
+
+ResponseEntity.created(uri).body(objeto) ⟶ já define 201 Created + Location
+
+ResponseEntity.noContent().build() ⟶ já define 204 No Content
+
+ResponseEntity.notFound().build() ⟶ já define 404 Not Found
+
+ResponseEntity.badRequest().body(erro) ⟶ já define 400 Bad Request
