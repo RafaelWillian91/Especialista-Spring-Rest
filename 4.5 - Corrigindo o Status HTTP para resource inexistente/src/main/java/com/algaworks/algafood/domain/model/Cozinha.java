@@ -24,7 +24,7 @@ public class Cozinha {
 	private Long id;
 
 	//@JsonIgnore//Remove a propriedade da representacao de saida do controle para Json ou xml
-	@JsonProperty(value = "titulo")//muda a representacao da propriedade de "nome" para "titulo"
+	//@JsonProperty(value = "titulo")//muda a representacao da propriedade de "nome" para "titulo" na requisicao
 	@Column(nullable = false)
 	private String nome;
 
