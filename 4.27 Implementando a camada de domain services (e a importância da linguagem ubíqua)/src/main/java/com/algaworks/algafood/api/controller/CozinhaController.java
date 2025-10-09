@@ -2,15 +2,11 @@ package com.algaworks.algafood.api.controller;
 
 import java.util.List;
 
-import com.algaworks.algafood.api.model.CozinhasXMLWrapper;
 import com.algaworks.algafood.domain.exception.EntidadeEmUsoException;
 import com.algaworks.algafood.domain.exception.EntidadeNaoEncontradaException;
 import com.algaworks.algafood.domain.service.CadastroCozinhaService;
-import org.hibernate.annotations.NotFound;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -34,13 +30,6 @@ public class CozinhaController {
 
 		return cozinhaRepository.listar();
 	}
-
-	//retorno embrulho de cozinha
-	@GetMapping(produces = MediaType.APPLICATION_XML_VALUE)
-	public CozinhasXMLWrapper listarXml(){
-		return new CozinhasXMLWrapper(cozinhaRepository.listar());
-	}
-
 	@GetMapping("/{cozinhaId}")
 	public ResponseEntity<Cozinha> buscaCozinha(@PathVariable Long cozinhaId) {
 
@@ -69,23 +58,24 @@ public class CozinhaController {
 		//é passado a origem e o destino. O terceiro parametro é ignorado
 		if(cozinhaAtual != null) {
 			BeanUtils.copyProperties(cozinha, cozinhaAtual, "id");
-			cozinhaAtual = cozinhaRepository.salvar(cozinhaAtual);
+			cozinhaAtual = cadastroCozinhaService.salvar(cozinhaAtual);
 			return ResponseEntity.ok(cozinhaAtual);
 		}
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 	}
 
 	@DeleteMapping("/{id}")
-	public ResponseEntity<Cozinha> deletarCozinha(@PathVariable Long id){
+	public ResponseEntity<String> deletarCozinha(@PathVariable Long id){
 		try {
 			cadastroCozinhaService.excluir(id);
 			return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 
 		}catch (EntidadeNaoEncontradaException e){
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getLocalizedMessage());
+			//return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 
 		}catch (EntidadeEmUsoException e){
-			return ResponseEntity.status(HttpStatus.CONFLICT).build();
+			return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getLocalizedMessage());
 		}
 	}
 	
