@@ -7,12 +7,13 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.algaworks.algafood.domain.model.Cozinha;
 import com.algaworks.algafood.domain.repository.CozinhaRepository;
 
-@Component
+@Repository
 public class CozinhaRepositoryImpl implements CozinhaRepository {
 
 	@PersistenceContext
@@ -28,15 +29,21 @@ public class CozinhaRepositoryImpl implements CozinhaRepository {
 	public Cozinha buscar(Long id) {
 		return manager.find(Cozinha.class, id);
 	}
-	
+
+	@Override
+	public List<Cozinha> consultarPorNome(String nomeCozinha) {
+		return manager.createQuery("from Cozinha where nome = :nome", Cozinha.class)
+				.setParameter("nome", nomeCozinha)
+				.getResultList();
+	}
+
 	@Transactional
 	@Override
 	public Cozinha salvar(Cozinha cozinha) {
 		return manager.merge(cozinha);
 	}
 	
-	@Transactional
-	@Override
+	@Transactional	@Override
 	public void remover(Long id) {
 		Cozinha cozinha = buscar(id);
 		
@@ -46,5 +53,7 @@ public class CozinhaRepositoryImpl implements CozinhaRepository {
 		
 		manager.remove(cozinha);
 	}
+
+
 
 }
