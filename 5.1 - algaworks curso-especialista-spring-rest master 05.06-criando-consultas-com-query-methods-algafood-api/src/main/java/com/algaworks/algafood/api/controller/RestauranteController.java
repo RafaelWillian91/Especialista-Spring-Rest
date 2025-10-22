@@ -35,7 +35,7 @@ public class RestauranteController {
 	@Autowired
 	private CadastroRestauranteService cadastroRestaurante;
 	
-	@GetMapping
+	@GetMapping("/listaRestaurantes")
 	public List<Restaurante> listar() {
 		return restauranteRepository.findAll();
 	}
