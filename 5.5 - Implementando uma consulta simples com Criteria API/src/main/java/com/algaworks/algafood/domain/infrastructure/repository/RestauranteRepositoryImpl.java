@@ -9,6 +9,8 @@ import org.springframework.util.StringUtils;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;
@@ -26,34 +28,17 @@ public class RestauranteRepositoryImpl implements RestauranteRepositoryQueries {
     @Override
     public List<Restaurante> find(String nome, BigDecimal taxaFreteInicial, BigDecimal taxaFreteFinal){
 
-        var jpql = new StringBuilder();
-            jpql.append("from Restaurante where 1 = 1 ");
+        CriteriaBuilder builder = manager.getCriteriaBuilder();
 
-        var parametros = new HashMap<String, Object>();
+        CriteriaQuery<Restaurante> criteria = builder.createQuery(Restaurante.class);
 
-            //se a String nao for nula nem vazia
-        if(StringUtils.hasLength(nome)){
-                jpql.append("and nome like :nome ");
-                parametros.put("nome", "%" + nome + "%");
-        }
-
-        if (taxaFreteInicial != null) {
-            jpql.append("and taxaFrete >= :taxaInicial ");
-            parametros.put("taxaFrete", taxaFreteInicial);
-        }
-
-        if (taxaFreteFinal != null) {
-            jpql.append("and taxaFrete <= :taxaFinal ");
-            parametros.put("taxaFreteFinal", taxaFreteFinal);
-        }
+        //from Restaurante
+        criteria.from(Restaurante.class);
 
 
-        TypedQuery<Restaurante> query =  manager
-                .createQuery(jpql.toString(), Restaurante.class);
+             TypedQuery <Restaurante> query =  manager.createQuery(criteria);
 
-        parametros.forEach( (chave, valor) -> query.setParameter(chave, valor)  );
-
-             return    query.getResultList();
+             return query.getResultList();
     }
 
 
