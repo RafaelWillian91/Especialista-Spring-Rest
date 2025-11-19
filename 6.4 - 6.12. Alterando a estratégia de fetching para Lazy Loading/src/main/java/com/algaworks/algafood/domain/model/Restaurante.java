@@ -8,10 +8,12 @@ import java.util.List;
 import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.context.annotation.Lazy;
 
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
@@ -28,8 +30,11 @@ public class Restaurante {
 	
 	@Column(name = "taxa_frete", nullable = false)
 	private BigDecimal taxaFrete;
-	
-	@ManyToOne
+
+	//@JsonIgnore
+	//Existe um proxy criado quando é Lazy, senao fica null (cozinha) e essa propriedade sem o JsonIgnore esta sendo acessada, mas nao tem nada
+	//@JsonIgnoreProperties("hibernateLazyInitializer") //Entao ignoramos a propriedade da classe proxy de cozinha do Hibernate chamada hibernateLazyInitializer
+	@ManyToOne//(fetch = FetchType.LAZY)
 	@JoinColumn(name = "cozinha_id", nullable = false)
 	private Cozinha cozinha;
 
@@ -48,12 +53,13 @@ public class Restaurante {
 	private LocalDateTime dataAtualizacao;
 
 	@ManyToMany
-	@JsonIgnore
+	//@JsonIgnore
 	@JoinTable(name = "restaurante_forma_pagamento", //A entidade que declara o @JoinTable é a dona da relação
 	joinColumns = @JoinColumn(name = "restaurante_id"),
 	inverseJoinColumns = @JoinColumn(name = "forma_pagamento_id"))
 	private List<FormaPagamento> formasPagamentos = new ArrayList<>();
 
+	@JsonIgnore
 	@OneToMany(mappedBy = "restaurante")
 	private List <Produto> produtos = new ArrayList<>();
 
