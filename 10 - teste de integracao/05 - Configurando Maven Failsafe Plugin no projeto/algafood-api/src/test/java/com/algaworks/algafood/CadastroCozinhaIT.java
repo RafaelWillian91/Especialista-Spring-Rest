@@ -7,21 +7,16 @@ import com.algaworks.algafood.domain.service.CadastroCozinhaService;
 import com.algaworks.algafood.domain.service.CadastroRestauranteService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit4.SpringRunner;
-
 import javax.validation.ConstraintViolationException;
-
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 @SpringBootTest
-@ActiveProfiles("dev")
-public class CadastroCozinhaIntegrationTests {
+@ActiveProfiles("test")
+public class CadastroCozinhaIT {
 
 	@Autowired
 	CadastroCozinhaService cozinhaService;
@@ -30,6 +25,7 @@ public class CadastroCozinhaIntegrationTests {
 	CadastroRestauranteService cadastroRestauranteService;
 	@Test
 	public void deveAtribuirId_QuandoCadastrarCozinhaComDadosCorretos(){
+		System.out.println(System.getProperty("spring.profiles.active"));
 		//cenário
 		Cozinha cozinha = new Cozinha();
 		cozinha.setNome("restaurante-Teste");
