@@ -9,12 +9,16 @@ import com.algaworks.algafood.domain.service.CadastroCozinhaService;
 import com.algaworks.algafood.domain.service.CadastroRestauranteService;
 import io.restassured.RestAssured;
 import org.assertj.core.api.Assertions;
+import org.hamcrest.Matcher;
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.test.context.ActiveProfiles;
 import javax.validation.ConstraintViolationException;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
@@ -39,7 +43,23 @@ public class CadastroCozinhaIT {
 				.when()
 				.get()
 				.then()
-				.statusCode(201);
+				.statusCode(200);
+
+	}
+
+	@Test
+	public void deveRetornar4Cozinhas_quandoConsultarCozinhas(){
+		RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+
+		given()
+				.basePath("/cozinhas")
+				//A porta é passada aki
+				.port(port)
+				.when()
+				.get()
+				.then()
+				.body("nome", Matchers.hasSize(4))
+				.body("nome", Matchers.hasItem("Indiana"));
 
 	}
 }
