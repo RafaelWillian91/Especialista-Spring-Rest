@@ -1,0 +1,145 @@
+
+html {
+	  background: url("../images/background.png") no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;	
+}
+
+.icons {
+	position: absolute;
+	width: 600px;
+	height: 200px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+.widget img {
+	width: 150px;
+	height: auto;
+	/* transform: scale(1);
+	-webkit-transition: transform 250ms ease-in-out;
+  -moz-transition: transform 250ms ease-in-out;
+  -o-transition: transform 250ms ease-in-out;
+	transition: transform 250ms ease-in-out; */
+}
+
+@keyframes icon-elastic {
+	0% {
+		transform: scale(1);
+	}
+	20% {
+		transform: scale(1.3);
+	}
+	40% {
+		transform: scale(1.1);
+	}
+	60% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1.2);
+	}
+}
+
+
+.widget:hover img {
+	transform: scale(1.2);
+	animation: icon-elastic 500ms;
+}
+
+.widget {
+	float: left;
+	position: relative;
+	width: 33%;
+	height: 150px;
+	text-align: center;
+	font: 20px/1em 'Century Gothic','Avant Garde','Helvetica';
+	text-shadow: 2px 2px 3px #444;
+	font-weight: 200;
+	color: #FFF;
+	margin-top: 100vh;
+}
+
+.widget.enter {
+	margin-top: 0px;
+	-webkit-animation: elastic 1s;
+  -moz-animation: elastic 1s;
+  -o-animation: elastic 1s;
+  animation: elastic 1s;
+}
+
+@keyframes elastic {
+	0% {
+		margin-top: 100vh;
+	}
+	20% {
+		margin-top: -20px;
+	}
+	40% {
+		margin-top: 20px;
+	}
+	60% {
+		margin-top: 0px;
+	}
+	100% {
+		margin-top: 0px;
+	}
+}
+
+.widget span {
+	position: absolute;
+	bottom: 0px;
+	display: block;
+	width: 100%;
+	text-align: center;
+	transform: translate(0,0);
+	-webkit-transition: transform 250ms ease-in-out;
+  -moz-transition: transform 250ms ease-in-out;
+  -o-transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+}
+
+.widget:hover span {
+	transform: translate(0px, 10px);
+}
+
+
+#title {
+	padding-top: 20px;
+	text-align: center;
+	opacity: 0;
+	
+}
+
+#title.enter {
+	-webkit-transition: opacity 2s ease-out;
+  -moz-transition: opacity 2s ease-out;
+  -o-transition: opacity 2s ease-out;
+  transition: opacity 2s ease-out;
+	opacity: 1;
+}
+
+#wrapper {
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+.widget a {
+	display: block;
+	position: relative;
+}
+
+

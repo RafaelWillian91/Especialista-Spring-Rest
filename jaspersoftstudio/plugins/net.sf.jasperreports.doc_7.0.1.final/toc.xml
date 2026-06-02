@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="JasperReports Documentation">
+	<topic label="JasperReports - README" href="docs/README.html"/> 
+	<topic label="JasperReports - Function Reference" href="docs/function.reference.html"/> 
+	<topic label="JasperReports - Configuration Reference" href="docs/config.reference.html"/>
+	<topic label="JasperReports - Sample Reference" href="sample.reference/README.html"/>
+	<topic label="JasperReports - Javadoc API" href="docs/api/index.html"/>
+	<topic label="JasperReports - Library FAQs" href="https://community.jaspersoft.com/knowledgebase/faq/jasperreports-library-faqs/"/>
+	<topic label="JasperReports - Discussion Forums" href="https://community.jaspersoft.com/forums/"/>
+ 	<topic label="JasperReports Ultimate Guide (version 3.0)" href="https://jasperreports.sourceforge.net/JasperReports-Ultimate-Guide-3.pdf"/>
+</toc>

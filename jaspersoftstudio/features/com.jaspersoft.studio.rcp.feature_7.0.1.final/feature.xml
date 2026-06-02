@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.jaspersoft.studio.rcp.feature"
+      label="RCP feature for Jaspersoft Studio Community"
+      version="7.0.1.final"
+      provider-name="Cloud Software Group, Inc."
+      os="linux,macosx,win32"
+      ws="cocoa,gtk,win32">
+
+   <description url="https://community.jaspersoft.com/project/jaspersoft-studio">
+      RCP feature for the version Jaspersoft Studio Community Edition
+   </description>
+
+   <copyright>
+      Copyright (C) 2010 - 2024. Cloud Software Group, Inc.
+   </copyright>
+
+   <url>
+      <update label="Jaspersoft Studio update site" url="https://jasperstudio.sf.net/updates"/>
+      <discovery label="Jaspersoft Studio Community Edition" url="https://community.jaspersoft.com/project/jaspersoft-studio"/>
+   </url>
+
+   <includes
+         id="com.jaspersoft.studio.feature"
+         version="7.0.1.final"/>
+
+   <includes
+         id="org.eclipse.egit"
+         version="6.9.0.202403050737-r"
+         optional="true"/>
+
+   <includes
+         id="org.eclipse.jgit"
+         version="6.9.0.202403050737-r"
+         optional="true"/>
+
+   <includes
+         id="org.eclipse.jgit.pgm"
+         version="6.9.0.202403050737-r"
+         optional="true"/>
+
+   <includes
+         id="com.jaspersoft.studio.jre.feature"
+         version="17.0.8.1_1"/>
+
+   <includes
+         id="org.eclipse.equinox.p2.user.ui"
+         version="2.4.2400.v20240519-2013"/>
+
+   <includes
+         id="org.eclipse.rcp"
+         version="4.32.0.v20240601-0610"/>
+
+   <includes
+         id="org.eclipse.jgit.http.apache"
+         version="6.9.0.202403050737-r"/>
+
+   <includes
+         id="org.eclipse.help"
+         version="2.3.1800.v20240601-0610"/>
+
+   <plugin
+         id="com.jaspersoft.studio.rcp"
+         version="7.0.1.final"/>
+
+   <plugin
+         id="org.eclipse.jdt.launching.macosx"
+         os="macosx"
+         version="3.6.300.v20240321-1645"/>
+
+   <plugin
+         id="org.eclipse.jdt.launching.ui.macosx"
+         os="macosx"
+         version="1.4.300.v20240321-1645"/>
+
+   <plugin
+         id="org.eclipse.ui.themes"
+         version="1.2.2400.v20240213-1133"/>
+
+   <plugin
+         id="org.eclipse.ui.net"
+         version="1.5.400.v20240413-1529"/>
+
+   <plugin
+         id="com.jaspersoft.studio.rcp.macosx"
+         os="macosx"
+         version="1.0.0"/>
+
+   <plugin
+         id="org.eclipse.egit.doc"
+         version="6.9.0.202403050737-r"/>
+
+   <plugin
+         id="org.eclipse.jdt.doc.user"
+         version="3.15.2200.v20240529-0958"/>
+
+   <plugin
+         id="org.eclipse.platform.doc.user"
+         version="4.32.0.v20240529-0958"/>
+
+   <plugin
+         id="com.jcraft.jsch"
+         version="0.1.55.v20230916-1400"/>
+
+   <plugin
+         id="org.eclipse.jsch.core"
+         version="1.5.400.v20240413-1649"/>
+
+   <plugin
+         id="org.eclipse.jsch.ui"
+         version="1.5.400.v20240413-1529"/>
+
+</feature>

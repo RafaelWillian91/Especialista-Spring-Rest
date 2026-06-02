@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.jaspersoft.studio.foundation.bundles"
+      label="Jaspersoft Studio Required Bundles Feature"
+      version="1.0.26"
+      provider-name="Cloud Software Group, Inc.">
+
+   <description url="https://community.jaspersoft.com/project/jaspersoft-studio">
+      Required bundles to run correctly Jaspersoft Studio
+   </description>
+
+   <copyright>
+      Copyright (C) 2010 - 2024. Cloud Software Group, Inc.
+   </copyright>
+
+   <url>
+      <update label="Jaspersoft Studio update site" url="https://jasperstudio.sf.net/updates"/>
+      <discovery label="Jaspersoft Studio Community Edition" url="https://community.jaspersoft.com/project/jaspersoft-studio"/>
+   </url>
+
+   <plugin
+         id="org.krysalis.barcode4j"
+         version="2.1.0"/>
+
+   <plugin
+         id="com.jaspersoft.studio.bundles.barbecue"
+         version="1.5.0.beta1_b02"/>
+
+   <plugin
+         id="com.jaspersoft.studio.bundles.beanshell"
+         version="2.0.0.b6_02"/>
+
+   <plugin
+         id="com.jaspersoft.studio.bundles.commons-beanutils"
+         version="1.9.4.b01"/>
+
+   <plugin
+         id="com.jaspersoft.studio.bundles.commons-digester"
+         version="2.1.0.201709071631"/>
+
+   <plugin
+         id="org.apache.servicemix.bundles.antlr"
+         version="2.7.7.5"/>
+
+   <plugin
+         id="org.apache.servicemix.bundles.rhino"
+         version="1.7.14.2"/>
+
+   <plugin
+         id="groovy"
+         version="4.0.8"/>
+
+   <plugin
+         id="com.jaspersoft.studio.bundles.jackson"
+         version="2.14.2.b01"/>
+
+   <plugin
+         id="org.apache.commons.lang3"
+         version="3.15.0"/>
+
+   <plugin
+         id="org.apache.commons.math3"
+         version="3.6.1"/>
+
+   <plugin
+         id="com.jaspersoft.studio.bundles.poi"
+         version="5.2.2.b03"/>
+
+   <plugin
+         id="com.jaspersoft.studio.bundles.cdt-java-client"
+         version="4.0.0.b02"/>
+
+   <plugin
+         id="com.google.zxing.core"
+         version="3.4.0"/>
+
+   <plugin
+         id="com.sun.activation.javax.activation"
+         version="1.2.0"/>
+
+   <plugin
+         id="javax.transaction"
+         version="1.1.1.v201105210645"/>
+
+   <plugin
+         id="com.sun.xml.bind.jaxb-osgi"
+         version="2.4.0.b180830_0438"/>
+
+   <plugin
+         id="jaxb-api"
+         version="2.4.0.b1808300359"/>
+
+   <plugin
+         id="org.apache.commons.collections"
+         version="3.2.2"/>
+
+   <plugin
+         id="com.jaspersoft.studio.bundles.soap"
+         version="1.4.2.b01"/>
+
+   <plugin
+         id="org.apache.ant"
+         version="1.10.14.v20230922-1200"/>
+
+   <plugin
+         id="org.apache.servicemix.bundles.xmlbeans"
+         version="5.0.3.1"/>
+
+   <plugin
+         id="org.apache.santuario.xmlsec"
+         version="2.3.4"/>
+
+   <plugin
+         id="org.apache.logging.log4j.api"
+         version="2.17.1"/>
+
+   <plugin
+         id="org.apache.logging.log4j.jcl"
+         version="2.17.1"/>
+
+   <plugin
+         id="org.apache.logging.log4j.core"
+         version="2.17.1"/>
+
+   <plugin
+         id="jaxen"
+         version="1.2.0"/>
+
+   <plugin
+         id="com.jaspersoft.studio.logging.log4j"
+         version="1.2.19.js01"/>
+
+   <plugin
+         id="jaxb-api-import-fragment"
+         version="1.0.0.b02"/>
+
+   <plugin
+         id="org.osgi.framework.system.packages.extra"
+         version="1.0.0.b02"/>
+
+   <plugin
+         id="bcpg"
+         version="1.78.1"/>
+
+   <plugin
+         id="bcprov"
+         version="1.78.1"/>
+
+   <plugin
+         id="org.apache.commons.commons-net"
+         version="3.9.0"/>
+
+   <plugin
+         id="org.apache.commons.commons-validator"
+         version="1.7.0"/>
+
+   <plugin
+         id="com.jaspersoft.studio.bundles.batik"
+         version="1.17.0.b01"/>
+
+   <plugin
+         id="bcpkix"
+         version="1.78.1"/>
+
+   <plugin
+         id="bcutil"
+         version="1.78.1"/>
+
+   <plugin
+         id="org.eclipse.nebula.cwt"
+         version="1.1.0.202402011804"/>
+
+   <plugin
+         id="org.eclipse.nebula.jface.cdatetime"
+         version="1.3.0.202402011804"/>
+
+   <plugin
+         id="org.eclipse.nebula.widgets.cdatetime"
+         version="1.5.0.202402011804"/>
+
+   <plugin
+         id="org.apache.commons.commons-codec"
+         version="1.16.0"/>
+
+   <plugin
+         id="org.apache.commons.commons-collections4"
+         version="4.4.0"/>
+
+   <plugin
+         id="org.apache.commons.text"
+         version="1.12.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.xml"
+         version="12.0.9"/>
+
+   <plugin
+         id="org.eclipse.jetty.ee8.webapp"
+         version="12.0.9"/>
+
+   <plugin
+         id="com.github.librepdf.openpdf"
+         version="1.3.32"/>
+
+   <plugin
+         id="com.github.librepdf.openpdf-fonts-extra"
+         version="1.3.32"/>
+
+   <plugin
+         id="org.apache.commons.discovery"
+         version="0.2.0.v201004190315"/>
+
+   <plugin
+         id="org.eclipse.orbit.xml-apis-ext"
+         version="1.0.0.v20230923-0644"/>
+
+</feature>

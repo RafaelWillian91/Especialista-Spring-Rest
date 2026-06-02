@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.jaspersoft.studio.supplemental.bundles"
+      label="Additional bundles for the Community Edition"
+      version="7.0.1.final"
+      provider-name="Cloud Software Group, Inc.">
+
+   <description url="https://community.jaspersoft.com/project/jaspersoft-studio">
+      Additional bundles for the Community Edition
+   </description>
+
+   <copyright>
+      Copyright (C) 2010 - 2024. Cloud Software Group, Inc.
+   </copyright>
+
+   <url>
+      <update label="Jaspersoft Studio update site" url="https://jasperstudio.sf.net/updates"/>
+      <discovery label="Jaspersoft Studio Community Edition" url="https://community.jaspersoft.com/project/jaspersoft-studio"/>
+   </url>
+
+   <requires>
+      <import plugin="com.jaspersoft.studio" version="7.0.1" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="com.jaspersoft.studio.svgimporter"
+         version="7.0.1.final"/>
+
+</feature>

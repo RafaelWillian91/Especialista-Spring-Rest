@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="net.sf.jasperreports.feature"
+      label="JasperReports Library Feature"
+      version="7.0.1.final"
+      provider-name="Cloud Software Group, Inc.">
+
+   <description url="https://community.jaspersoft.com/project/jaspersoft-studio">
+      JasperReports Library for Jaspersoft Studio
+   </description>
+
+   <copyright>
+      Copyright (C) 2010 - 2024. Cloud Software Group, Inc.
+   </copyright>
+
+   <url>
+      <update label="Jaspersoft Studio update site" url="https://jasperstudio.sf.net/updates"/>
+      <discovery label="Jaspersoft Studio Community Edition" url="https://community.jaspersoft.com/project/jaspersoft-studio"/>
+   </url>
+
+   <includes
+         id="net.sf.jasperreports.samples.feature"
+         version="7.0.1.final"/>
+
+   <includes
+         id="com.jaspersoft.studio.foundation.bundles"
+         version="1.0.26"/>
+
+   <plugin
+         id="net.sf.jasperreports"
+         version="7.0.1.final"/>
+
+   <plugin
+         id="net.sf.jasperreports.doc"
+         version="7.0.1.final"/>
+
+</feature>

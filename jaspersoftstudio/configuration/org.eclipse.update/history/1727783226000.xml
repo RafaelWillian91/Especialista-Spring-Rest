@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config date="1727797625315" transient="false">
+	<site updateable="true" url="platform:/base/" enabled="true" policy="USER-EXCLUDE">
+		<feature id="org.eclipse.ecf.filetransfer.feature" version="3.14.1900.v20230715-1945" url="features/org.eclipse.ecf.filetransfer.feature_3.14.1900.v20230715-1945/">
+		</feature>
+		<feature id="org.eclipse.ecf.filetransfer.httpclient5.feature" version="1.1.702.v20231114-1017" url="features/org.eclipse.ecf.filetransfer.httpclient5.feature_1.1.702.v20231114-1017/">
+		</feature>
+		<feature id="com.jaspersoft.studio.supplemental.bundles" version="7.0.1.final" url="features/com.jaspersoft.studio.supplemental.bundles_7.0.1.final/">
+		</feature>
+		<feature id="org.eclipse.ecf.core.feature" version="1.6.2.v20231021-2127" url="features/org.eclipse.ecf.core.feature_1.6.2.v20231021-2127/">
+		</feature>
+		<feature id="jre.win32.win32.x86_64.feature" version="17.0.8.1_1" url="features/jre.win32.win32.x86_64.feature_17.0.8.1_1/">
+		</feature>
+		<feature id="org.eclipse.jgit.gpg.bc" version="6.9.0.202403050737-r" url="features/org.eclipse.jgit.gpg.bc_6.9.0.202403050737-r/">
+		</feature>
+		<feature id="com.jaspersoft.studio.rcp.feature" version="7.0.1.final" url="features/com.jaspersoft.studio.rcp.feature_7.0.1.final/">
+		</feature>
+		<feature id="org.eclipse.jgit.ssh.apache" version="6.9.0.202403050737-r" url="features/org.eclipse.jgit.ssh.apache_6.9.0.202403050737-r/">
+		</feature>
+		<feature id="com.jaspersoft.studio.feature" version="7.0.1.final" url="features/com.jaspersoft.studio.feature_7.0.1.final/" plugin-identifier="com.jaspersoft.studio">
+		</feature>
+		<feature id="org.eclipse.help" version="2.3.1800.v20240601-0610" url="features/org.eclipse.help_2.3.1800.v20240601-0610/" plugin-identifier="org.eclipse.help.base">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.rcp.feature" version="1.4.2400.v20240515-1919" url="features/org.eclipse.equinox.p2.rcp.feature_1.4.2400.v20240515-1919/">
+		</feature>
+		<feature id="org.eclipse.ecf.core.ssl.feature" version="1.1.501.v20230507-1921" url="features/org.eclipse.ecf.core.ssl.feature_1.1.501.v20230507-1921/">
+		</feature>
+		<feature id="org.eclipse.emf.common" version="2.31.0.v20240314-0928" url="features/org.eclipse.emf.common_2.31.0.v20240314-0928/">
+		</feature>
+		<feature id="org.eclipse.jgit.http.apache" version="6.9.0.202403050737-r" url="features/org.eclipse.jgit.http.apache_6.9.0.202403050737-r/">
+		</feature>
+		<feature id="org.eclipse.rcp" version="4.32.0.v20240601-0610" url="features/org.eclipse.rcp_4.32.0.v20240601-0610/">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.core.feature" version="1.7.200.v20240515-1919" url="features/org.eclipse.equinox.p2.core.feature_1.7.200.v20240515-1919/">
+		</feature>
+		<feature id="com.jaspersoft.studio.jre.feature" version="17.0.8.1_1" url="features/com.jaspersoft.studio.jre.feature_17.0.8.1_1/">
+		</feature>
+		<feature id="com.jaspersoft.studio.foundation.bundles" version="1.0.26" url="features/com.jaspersoft.studio.foundation.bundles_1.0.26/">
+		</feature>
+		<feature id="org.eclipse.jgit" version="6.9.0.202403050737-r" url="features/org.eclipse.jgit_6.9.0.202403050737-r/">
+		</feature>
+		<feature id="org.eclipse.e4.rcp" version="4.32.0.v20240528-0813" url="features/org.eclipse.e4.rcp_4.32.0.v20240528-0813/">
+		</feature>
+		<feature id="org.eclipse.ecf.filetransfer.httpclientjava.feature" version="2.0.200.v20231114-1017" url="features/org.eclipse.ecf.filetransfer.httpclientjava.feature_2.0.200.v20231114-1017/">
+		</feature>
+		<feature id="net.sf.jasperreports.feature" version="7.0.1.final" url="features/net.sf.jasperreports.feature_7.0.1.final/">
+		</feature>
+		<feature id="org.eclipse.egit" version="6.9.0.202403050737-r" url="features/org.eclipse.egit_6.9.0.202403050737-r/">
+		</feature>
+		<feature id="org.eclipse.emf.ecore" version="2.37.0.v20240203-0859" url="features/org.eclipse.emf.ecore_2.37.0.v20240203-0859/">
+		</feature>
+		<feature id="org.eclipse.ecf.filetransfer.ssl.feature" version="1.1.402.v20231021-2127" url="features/org.eclipse.ecf.filetransfer.ssl.feature_1.1.402.v20231021-2127/">
+		</feature>
+		<feature id="net.sf.jasperreports.samples.feature" version="7.0.1.final" url="features/net.sf.jasperreports.samples.feature_7.0.1.final/">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.extras.feature" version="1.4.2400.v20240519-2013" url="features/org.eclipse.equinox.p2.extras.feature_1.4.2400.v20240519-2013/">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.user.ui" version="2.4.2400.v20240519-2013" url="features/org.eclipse.equinox.p2.user.ui_2.4.2400.v20240519-2013/">
+		</feature>
+	</site>
+</config>

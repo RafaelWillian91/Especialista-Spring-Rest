@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.jaspersoft.studio.feature"
+      label="Jaspersoft Studio feature"
+      version="7.0.1.final"
+      provider-name="Cloud Software Group, Inc."
+      plugin="com.jaspersoft.studio"
+      os="linux,macosx,win32"
+      ws="cocoa,gtk,win32">
+
+   <description url="https://community.jaspersoft.com/project/jaspersoft-studio">
+      Jaspersoft Studio Community Edition
+   </description>
+
+   <copyright>
+      Copyright (C) 2010 - 2024. Cloud Software Group, Inc.
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <update label="Jaspersoft Studio update site" url="https://jasperstudio.sf.net/updates"/>
+      <discovery label="Jaspersoft Studio Community Edition" url="https://community.jaspersoft.com/project/jaspersoft-studio"/>
+   </url>
+
+   <includes
+         id="com.jaspersoft.studio.supplemental.bundles"
+         version="7.0.1.final"
+         optional="true"/>
+
+   <includes
+         id="net.sf.jasperreports.feature"
+         version="7.0.1.final"/>
+
+   <plugin
+         id="com.jaspersoft.studio"
+         version="7.0.1.final"/>
+
+   <plugin
+         id="com.jaspersoft.studio.doc"
+         version="7.0.1.final"/>
+
+   <plugin
+         id="com.jaspersoft.studio.data"
+         version="7.0.1.final"/>
+
+   <plugin
+         id="com.jaspersoft.studio.components"
+         version="7.0.1.final"/>
+
+   <plugin
+         id="com.jaspersoft.studio.server"
+         version="7.0.1.final"/>
+
+   <plugin
+         id="com.jaspersoft.studio.properties"
+         version="7.0.1.final"/>
+
+   <plugin
+         id="com.jaspersoft.studio.data.drivers"
+         version="7.0.1.final"/>
+
+   <plugin
+         id="com.jaspersoft.studio.editor.jrexpressions"
+         version="7.0.1.final"/>
+
+   <plugin
+         id="com.jaspersoft.studio.editor.jrexpressions.ui"
+         version="7.0.1.final"/>
+
+   <plugin
+         id="com.jaspersoft.studio.data.sql.ui"
+         version="7.0.1.final"/>
+
+   <plugin
+         id="com.jaspersoft.studio.data.sql"
+         version="7.0.1.final"/>
+
+   <plugin
+         id="com.jaspersoft.studio.xtext.jface"
+         version="7.0.1.final"/>
+
+   <plugin
+         id="com.jaspersoft.studio.babel.editor"
+         version="7.0.1.final"/>
+
+   <plugin
+         id="com.jaspersoft.studio.server.soap"
+         version="7.0.1.final"/>
+
+   <plugin
+         id="com.jaspersoft.studio.hibernate"
+         version="5.4.24.final"/>
+
+   <plugin
+         id="com.jaspersoft.studio.book"
+         version="7.0.1.final"/>
+
+   <plugin
+         id="com.jaspersoft.studio.widgets.map"
+         version="7.0.1.final"/>
+
+</feature>
