@@ -1,0 +1,27 @@
+package com.algaworks.algafood.domain.service;
+
+import lombok.Builder;
+import lombok.Getter;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+
+import java.io.InputStream;
+import java.nio.file.Path;
+import java.util.UUID;
+
+
+public interface FotoStorageService {
+    void armazenar(NovaFoto novaFoto);
+
+    default String gerarNomeArquivo (String nomeArquivo){
+        return UUID.randomUUID().toString() + "__" + nomeArquivo;
+    }
+    @Getter
+    @Builder
+    class NovaFoto {
+
+        private String nomeArquivo;
+        private InputStream inputStream;
+
+    }
+}
