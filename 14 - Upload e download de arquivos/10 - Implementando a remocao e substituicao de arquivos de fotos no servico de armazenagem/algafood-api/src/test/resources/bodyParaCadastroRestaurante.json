@@ -1,0 +1,7 @@
+{
+  "nome": "Santo Burguer teste",
+  "taxaFrete" : "10",
+  "cozinha": {
+    "id": "2"
+  }
+}
