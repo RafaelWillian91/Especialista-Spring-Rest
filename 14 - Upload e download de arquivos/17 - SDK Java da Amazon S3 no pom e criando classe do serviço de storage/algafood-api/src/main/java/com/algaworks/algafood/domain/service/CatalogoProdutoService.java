@@ -40,6 +40,7 @@ public class CatalogoProdutoService {
 
         FotoStorageService.NovaFoto novaFoto = FotoStorageService.NovaFoto.builder()
                 .nomeArquivo(fotoProduto.getNomeArquivo())
+                .contentType(fotoProduto.getContentType())
                 .inputStream(dadosArquivo).build();
 
         fotoStorageService.substituir(nomeArquivoExistente, novaFoto);

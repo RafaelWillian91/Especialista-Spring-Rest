@@ -35,4 +35,10 @@ public interface FotoStorageService {
         private InputStream inputStream;
 
     }
+
+    class FotoRecuperada{
+
+        private InputStream inputStream;
+        private String url;
+    }
 }

@@ -4,6 +4,7 @@ import com.algaworks.algafood.core.storage.StorageProperties;
 import com.algaworks.algafood.domain.service.FotoStorageService;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.model.CannedAccessControlList;
+import com.amazonaws.services.s3.model.DeleteObjectRequest;
 import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.amazonaws.services.s3.model.PutObjectRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +17,11 @@ public class S3FotoStorageService implements FotoStorageService {
 
     @Autowired
     private AmazonS3 amazonS3;
-
     @Autowired
     private StorageProperties storageProperties;
     @Override
     public InputStream recuperar(String nomeArquivo) {
+
         return null;
     }
 
@@ -36,8 +37,7 @@ public class S3FotoStorageService implements FotoStorageService {
                 storageProperties.getS3().getBucket(),
                 caminhoArquivo,
                 novaFoto.getInputStream(),
-                objectMetaData)
-                .withCannedAcl(CannedAccessControlList.PublicRead);
+                objectMetaData);
 
         amazonS3.putObject(putObjectRquest);
         }catch (Exception e){
@@ -51,6 +51,15 @@ public class S3FotoStorageService implements FotoStorageService {
 
     @Override
     public void remover(String nomeArquivo) {
+        try {
+            var deleteObjectRequest = new DeleteObjectRequest(
+
+                    storageProperties.getS3().getBucket(), getCaminhoArquivo(nomeArquivo));
+
+            amazonS3.deleteObject(deleteObjectRequest);
+        }catch (Exception e){
+            throw new StorageException("Não foi possível deletar arquivo na amazon S3", e);
+        }
 
     }
 }
