@@ -24,8 +24,9 @@ de persistência, validação, tratamento de erros, testes e cache HTTP.
 - Domain Events
 - Cache HTTP e ETag
 
-- ## Arquitetura
+## 🏗️ Arquitetura
 
+```text
 Controller
    ↓
 Service
@@ -33,9 +34,6 @@ Service
 Repository
    ↓
 MySQL
-
-## Exemplos de endpoints
-
 GET /restaurantes
 GET /pedidos/{codigo}
 POST /pedidos
