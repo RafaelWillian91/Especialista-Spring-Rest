@@ -34,8 +34,16 @@ Service
 Repository
    ↓
 MySQL
-GET /restaurantes
-GET /pedidos/{codigo}
-POST /pedidos
-PUT /restaurantes/{id}
-DELETE /formas-pagamento/{id}
+```
+
+---
+
+## 🔗 Exemplos de endpoints
+
+| Método | Endpoint | Descrição |
+|---|---|---|
+| GET | `/restaurantes` | Lista restaurantes |
+| GET | `/pedidos/{codigo}` | Busca um pedido |
+| POST | `/pedidos` | Cria um novo pedido |
+| PUT | `/restaurantes/{id}` | Atualiza um restaurante |
+| DELETE | `/formas-pagamento/{id}` | Remove uma forma de pagamento |
